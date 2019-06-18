@@ -1,0 +1,470 @@
+﻿
+This post is about Entity Framework Interview Questions that will explore various features, concepts and FAQs regarding Microsoft Entity Framework. It’s basically a collection of most frequently asked Interview Questions on Entity Framework for developers. You can also explore some practical solutions implementing Entity Framework here:
+Building Your First MVC Application with Entity Framework [Part 1 & Part 2]
+Build a Real-world App with ASP.NET Core and Angular 2+
+Understanding Model First Approach in MVC5 with EF6
+What’s new in Entity Framework from Beginning to EF6
+Complete ASP.NET MVC 5 Online Course
+Before we move on, answer this simple Question to test your existing EF skill? 
+You are working with WebDevTutorial and building an ADO.NET Entity Framework application for a client. You need to validate the conceptual schema definition language (CSDL), store schema definition language (SSDL), and mapping specification language (MSL) files. Which Entity Data Model tool can you use? (Each correct answer presents a complete solution. Choose all that apply.)
+
+A. EDM Generator (EdmGen.exe)
+B. ADO.NET Entity Data Model Designer
+C. Update Model Wizard
+D. Entity Data Model Wizard
+E. All of Above
+F. None of Above
+For a complete online test and Practice Exams on Web Technologies, Click Here.
+ Correct Answer: B, D
+Entity Framework Interview Questions List
+What is Entity Framework?
+What are the advantages of using Entity Framework?
+What is Entity Framework(EF) Core?
+What is the Nuget Package console command to install Entity Framework, if it’s not there in your project at that time?
+How to Install Entity Framework via NuGet Package in Visual Studio?
+
+Where do we use Virtual classes in Entity Framework DbContext Models?
+Entity Framework uses DbContext, How is it different from Object Context?
+What’s new in Entity Framework 6?
+Can we access a model in Entity Framework without primary key defined?
+Why do we use Lazy Loading in Entity Framework?
+Why DB Context models object disposal is important in Entity Framework?
+Can we do an insertion and deletion at the same block of code and then Apply save changes to them in a statement in Entity Framework?
+What are the development approaches are supported in Entity Framework?
+If we have not followed proper conventions in Code First approach, then how we can mark a field/property as primary key?
+How we can enforce number of characters (minimum or maximum) for a field using Entity Framework Property Annotation method?
+
+How we can use a property for an Entity that is not mapped to database in Code First Approach?
+What is the query syntax we use to query an ADO.NET Entity Data Model?
+Is LINQ a feature of Entity Framework?
+Does Default New Project Creation under Internet Template Category of ASP.NET MVC have any DB Context Ready while creating the project?
+If you provide the Primary Key value while inserting record to Entity Framework, will that execute fine, or will it throw an error while the adding statement?
+What are the properties or Database Elements get copied in Dataset when Clone method is used?
+What is the role of a Self-Tracking Entities?
+Can you describe the feature of split entity in Entity Framework?
+What is the role of Entity Container in Entity Framework?
+Do we need to define any assembly refinances of entity framework if we use in web.config file?
+More Entity Framework Interview Questions for beginners and Experienced
+LINQ to SQL Vs Entity Framework?
+How to handle transactions in Entity Framework 6?
+What is Entity Framework?
+Microsoft Entity Framework (EF) is an Object Relational Mapping framework that provides an abstraction layer (a kind of mapping) between two incompatible systems (i.e. Object oriented programming languages with Relational databases). It enables us to interact with relational data in an object oriented way, meaning we can retrieve and manipulate data as strongly typed objects using LINQ queries.
+Microsoft introduced Entity Framework with .NET Framework v3.5 Service Pack 1 supporting basic Object Relational Mapping support but later EF4 was introduced as second version aligning with .NET Framework v4.0.
+Back to top
+What are the advantages of using Entity Framework?
+Main advantages of Entity Framework are:
+Separation of Concerns (SoC).
+LINQ is used as a common syntax for all object queries.
+Code Auto-Generation.
+Back to top
+What is Entity Framework(EF) Core?
+Entity Framework 7 rebranded as Entity Framework Core 1.0 is basically an object-relational mapping framework that allows us to communicate with database using .NET objects. It’s a lightweight, open-source and extensible framework for targeting .NET Core applications.
+Entity Framework Core 1.0 has following additional features:
+Cross Platform i.e. can work with .net core application built for MacOS or Linux.
+Designed for disconnected/web services.
+Entity Framework Core is cloud optimized.
+EF Core is Device Optimized as being lightweight can work with SQLite.
+Support for relational and non-relational databases.
+
+EF Core also has Fluent API that enables a user to override the OnModeCreating strategy on a user’s context and makes it easy to figure the convention model.
+Built-In convention that effectively builds an initial model based on the entity classes.
+The EF Core features data annotations that are added to entity classes or properties to influence the EF model.
+It also has Snapshot change tracking properties based on recording the initial values of an entity as it is retrieved from the database.
+Notification change tracking enables a user’s entities to signal the change tracker in case property values are modified.
+Connection resiliency that automatically retries any failed database commands. Connection resiliency comes in handy for connection to SQL Azure which is prone to transient failures.
+
+
+
+
+There are many key features those were available in EF 6.x but not included in Entity Framework Core 1.0.
+No Lazy Loading.
+Group By Translation – If query includes a group by clause, it will be omitted.
+Not Supporting stored procedures.
+No Graphical Modeling Tools supported.
+Spatial Data Types (a wrapper around a COM library).
+Simple Command Interception.
+Entity Framework in Depth: The Complete Guide
+
+Take this Online Course at Discounted Price
+Back to top
+What is the Nuget Package console command to install Entity Framework, if it’s not there in your project at that time?
+Following is the Nuget Package console command to install Entity Framework:
+Install-Package EntityFramework -Version 6.1.1
+Back to top
+How to Install Entity Framework via NuGet Package in Visual Studio?
+It’s quite simple to install Entity Framework via Nuget for our project in Visual Studio. For example, If I have just created a new project and want to install Entity Framework, below step by step approach will be helpful.
+Right click on the project and choose “Manage NuGet Packages…”.
+On Installation page, choose “Browse” Tab from top left and then enter “Entity Framework” in search box below that and click on search icon. It will list down all Entity Framework related results below. As you can see, we have selected Entity Framework and all details (including version, author, License, Date Published etc.) of the selected item are displayed in right area.
+In above screenshot, click on Install button. It will ask for a Review Changes going to be done, confirm by clicking “YES”.
+It followed by a License Acceptance confirmation. Just confirm by clicking “I Accept”.
+Once you accept the License, it will complete the installation displaying details in Visual Studio Output Window as shown in below screenshot. Finally, you can see the successful installation message in Output Window. Once the installation is done successfully, you can see EntityFramework and EntityFramework.SqlServer in References of our project.
+Back to top
+Where do we use Virtual classes in Entity Framework DbContext Models?
+We use Virtual classes in Entity Framework in context class where we define DBSet of corresponding table. As we can see easily in below code sample for Students and Departments:
+
+Back to top
+Entity Framework uses DbContext, How is it different from Object Context?
+DbContext can be used for code first while Object Context doesn’t. It exposes the most commonly used features of ObjectContext.
+Back to top
+What’s new in Entity Framework 6?
+Customizing Code First Conventions.
+Logging of database commands.
+Stored Procedure Mapping.
+Asynchronous Queries and Save support.
+
+With EF6, in applications with lots of tables and relationships defined, our context objects open faster. We should also be better insulated from dropped connections (at least, if the drop is transient and not permanent — nothing is going to help there).  EF6 also generates SQL faster from LINQ queries than before (though it’s the same SQL that’s being generated as in earlier versions of EF, so your actual data access won’t be any faster or slower).
+Back to top
+Get Low level understanding about Entity Framework Core v2.0 and how to use it with ASP.NET Core?
+Build Application with all CRUD Operations
+Undestand Code-First and Data First Approaches
+How Migration and Seeding works?
+Advanced techniques to design Model
+Advanced techniques for all data operations
+Can we access a model in Entity Framework without primary key defined?
+No, but we can access data.
+Using Primary Key:
+Student student = db.Students.Find(id);
+Without Primary Key:
+Student student = db.Students.Where(x=>x.StudentName==”Ahmad”);
+Back to top
+Why do we use Lazy Loading in Entity Framework?
+Entity Framework facilitates us to avoid huge, deep, highly-relational queries, so that the data will not heavy on the web.
+
+1
+2
+3
+4
+Student student = db.Students.Find(id); //----> Step 1: Student record will load.
+if(student != null){
+	student.Department; // ---> Step 2: Department details will be loaded.
+}
+Note: As by default, lazy loading option is enabled in Entity Framework but that can cause major performance issues in some scenarios as below:
+
+1
+2
+3
+4
+5
+var students = db.Students.ToList(); // no department will be loaded.
+foreach(var student in students)
+{
+	student.Department; //department will be loaded here.
+}
+As for above scenario, student.Department will load department from SQL Server by firing a new SQL query for each iteration and it’s a performance degradation in case of large number of records.
+We can disable Lazy loading (or in other words, enable eager loading) by using the following code:
+
+1
+db.ContextOptions.LazyLoadingEnabled = false;
+Back to top
+More Interview Questions on Entity Framework for experienced developers
+Why DB Context models object disposal is important in Entity Framework?
+Until it’s disposed, it will be holding resources that aren’t in. If not disposed then Garbage collector will free the space but in some instance it holds up.
+Calling dispose method to clear memory.
+Back to top
+Can we do an insertion and deletion at the same block of code and then Apply save changes to them in a statement in Entity Framework?
+Yes, WE CAN by using the below piece of code:
+
+Here the student record will insert to db but not physically. When we call SaveChanges method then it actually insert in db and commit the transaction. If we delete before committing transaction nothing will change in database.
+Back to top
+What are the development approaches are supported in Entity Framework?
+Following are the development approaches available in Entity Framework. Implementation of each approach is given in detail in separate Entity Framework Tutorial:
+Code First Approach – where code defines the database. Entity Framework handles creation. A complete detailed implementation of Entity Framework Code First Approach here.
+Database First Approach – regular approach used where database is first created or already exists.
+Model First Approach – where model is drawn first that further generate database scripts.
+
+public class Category
+{
+   [Key] 
+   public int UniqueCategoryIdentifier { get; set; }
+ 
+   public string CategoryName { get; set; }
+ 
+   public ICollection<Product> Products { get; set; }
+}
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+public class Product
+{
+   [Key]
+   public int UniqueProductIdentifier { get; set; }
+ 
+   public string ProductName { get; set; }
+ 
+   public decimal Price { get; set; }
+ 
+   ....
+   ....
+}
+If we don’t follow the convention as well as not using the “Key” attribute, then will end up with following error.
+
+1
+"One or more validation errors were detected during model generation: System.Data.Edm.EdmEntityType : EntityType 'Category' has no key defined. Define the key for this Entity Type........"
+
+Note: It’s always recommended to use proper convention or use “Key” attribute to tell Entity Framework about our primary key field.
+Back to top
+How we can enforce number of characters (minimum or maximum) for a field using Entity Framework Property Annotation method?
+We can easily use property annotation of MinLength and MaxLength to enforce minimum or maximum number of characters for a specific field respectively. For example, If we want to have minimum and maximum number of limit for CategoryName field for Category Entity (say minimum 10 and maximum 100 characters). Below is the way to use, MinLength and MaxLength:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+public class Category
+{
+   [Key] 
+   public int UniqueCategoryIdentifier { get; set; }
+ 
+   [MaxLength(100, ErrorMessage="Maximum of 100 characters allowed")]
+   [MinLength(10, ErrorMessage="Minimum of 10 characters required")]
+   public string CategoryName { get; set; }
+ 
+   public ICollection<Product> Products { get; set; }
+}
+Back to top
+How we can use a property for an Entity that is not mapped to database in Code First Approach?
+In Code First Approach, all properties are normally mapped to database. But in certain scenarios, if we don’t want a specific property to be mapped to database, Entity Framework provides us with NotMapped attribute for annotation.
+Let’s take a practical example, we have an entity i.e. Product and we want to have a ProductCode that will not be mapped to database. So, we will do the following to achieve in Code First Approach.
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+public class Product
+{
+   [Key]
+   public int UniqueProductIdentifier { get; set; }
+ 
+   public string ProductName { get; set; }
+ 
+   [NotMapped]
+   public string ProductCode 
+   {
+	get{
+		return UniqueProductIdentifier + "-" + ProductName
+	}
+   }
+ 
+   public decimal Price { get; set; }
+ 
+   ....
+   ....
+}
+Back to top
+What is the query syntax we use to query an ADO.NET Entity Data Model?
+We can use LINQ to Query ADO.Net Entity Framework. For Example:
+
+Back to top
+Is LINQ a feature of Entity Framework?
+Yes, following is the example to get student record from Section A.
+
+The same in Entity Framework:
+Student student = db.Students.Where(x=>x.Section==”A”);
+You can find top and best courses on udemy about Entity Framework and more programming and web technologies.
+Back to top
+Does Default New Project Creation under Internet Template Category of ASP.NET MVC have any DB Context Ready while creating the project?
+Yes, There is, as we can see in the below screenshot:
+Back to top
+If you provide the Primary Key value while inserting record to Entity Framework, will that execute fine, or will it throw an error while the adding statement?
+Yes it will threw error if same a record present with same data. If identity is set then it will give error in any case.
+Back to top
+What are the properties or Database Elements get copied in Dataset when Clone method is used?
+It will create a new object with same properties with a new instance.
+Back to top
+What is the role of a Self-Tracking Entities?
+Self-tracking entity allows you to add code generated item:
+Back to top
+Can you describe the feature of split entity in Entity Framework?
+Entity splitting gives us the ability to take an entity in our model and split this entity into multiple database tables. When we query an entity, Entity Framework will create a query that Automatically joins the related physical tables for us.
+Back to top
+What is the role of Entity Container in Entity Framework?
+Entity container is a logical grouping of entity sets, association sets, and function imports.  The following must be true of an entity container defined in a conceptual model:
+At least one entity container must be defined in each conceptual model.  The entity container must have a unique name within each conceptual model.
+
+Back to top
+Do we need to define any assembly references of entity framework if we use in web.config file?
+Yes, that is necessary:
+Back to top
+More Entity Framework Interview Questions including Entity Framework Core
+LINQ to SQL Vs Entity Framework?
+Following table clearly explains the difference between LINQ to SQL Vs Entity Framework:
+Entity Framework
+LINQ to SQL
+Work with any database including SQL Server, Oracle, MySQL, DB2 etc.
+Works but limited to SQL Server.
+Entity Framework works well in enterprise scenarios where requirement is to develop a loosely coupled application.
+LINQ to SQL is good in rapid application development scenarios but follows a tightly coupled approach.
+Entity Framework maintain a conceptual model that actually maps to storage model using a mapping. So, it’s possible that multiple EF classes map to one table or multiple tables map to one EF class.
+A LINQ Entity directly maps to one SQL Server table only. In order to maintain a relationship, it generates a .dbml file.
+Can generate database from model and it’s a key feature.
+Generate database from model is not possible.
+Back to top
+
+How to handle transactions in Entity Framework 6
+Transaction being a single unit of work that are either successful or failed has really important for an application that is developed using Entity Framework. Entity Framework supports transactions in following ways and this Entity Framework 6 Interview Questions demonstrate the same:
+The “SaveChanges()” method in Entity Framework operates within a transaction and saves results of the work. This is how the data integrity is being ensured.
+
+In Entity Framework 6.0, two new APIs are used to maintain the transaction:
+1. DbContext.Database.BeginTransaction: Below we can find source code to understand that how different operations are combined within the same transaction and further are all committed or rollbacked. This method also allows us to specify the isolation level for the transaction.
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+using (EFModelFirst_DemoContainer context = new EFModelFirst_DemoContainer()) 
+{ 
+      using (var transaction = context.Database.BeginTransaction()) 
+      try 
+      { 
+            Category c = new Category(); 
+            c.CategoryName = "Mobile"; 
+            context.Categories.Add(c); 
+            context.SaveChanges();
+ 
+            Product p = new Product(); 
+            p.CategoryId = c.CategoryId; 
+            p.ProductName = "HTC"; 
+            p.Price = "15000"; 
+            context.Products.Add(p); 
+            context.SaveChanges();
+  
+            transaction.Commit(); 
+       }
+       catch (Exception ex) 
+       { 
+            transaction.Rollback(); 
+       } 
+}
+2. DbContext.Database.UseTransaction: It allows DbContext to use a transaction that was stated outside of the Entity Framework. It means using this API we can use any existing transaction with Entity Framework.
+It is used when sometimes we must use an existing transaction that is started outside of the Entity Framework.
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+public EFModelFirst_DemoContainer() 
+: base("name=EFModelFirst_DemoContainer") 
+{
+}
+(SqlConnection con = new SqlConnection("connectionString")) 
+  { 
+     con.Open(); 
+     using (var transaction = con.BeginTransaction()) 
+     { 
+         using (var transaction1 = context.Database.BeginTransaction()) { 
+           try 
+           {  
+               Category c = new Category(); 
+               c.CategoryName = "Mobile"; 
+               context.Categories.Add(c); 
+               context.SaveChanges();
+ 
+               Product p = new Product(); 
+               p.CategoryId = c.CategoryId; 
+               p.ProductName = "HTC"; 
+               p.Price = "15000"; 
+               context.Products.Add(p); 
+ 
+               context.SaveChanges();
+               transaction.Commit(); 
+            }
+            catch (Exception ex) 
+            { 
+               transaction.Rollback(); 
+            }
+       } 
+  }
+Back to top
+Top ASP.NET MVC Online Courses 
+Learn ASP NET MVC 5 step by step [Maruti Makwana, Corporate Trainer] 28 Lectures, 2.5 Hours Video, Intermediate Level
+Very easy to learn video series on Asp.Net MVC 5 Specially for those who are familiar with Asp.Net Web forms.
+AngularJS for ASP.NET MVC Developers [Brett Romero] 10 Lectures, 1 hour video, Intermediate Level
+The Fastest Way For .NET Developers To Add AngularJS To Their Resume
+ASP.NET with Entity Framework from Scratch [Manzoor Ahmad, MCPD | MCT] 77 Lectures, 10 hour video, All Level
+Latest approach of web application development
+Comprehensive ASP.NET MVC [3D BUZZ] 34 lectures, 14 Hours Video, All Levels
+From zero knowledge of ASP.NET to deploying a complete project to production.
+Concluding Notes:
+Again, this is my prepared list of important Interview Questions on Entity Framework but reader can suggest/contribute more related concept area. I’ll be more happy to add those questions/concepts and update the Entity Framework Interview Questions list.

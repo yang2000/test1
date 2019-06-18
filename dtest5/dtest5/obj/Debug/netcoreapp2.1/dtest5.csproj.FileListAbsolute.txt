@@ -1,0 +1,11 @@
+C:\Users\yang2\source\repos\CoreTest\dtest5\dtest5\bin\Debug\netcoreapp2.1\dtest5.deps.json
+C:\Users\yang2\source\repos\CoreTest\dtest5\dtest5\bin\Debug\netcoreapp2.1\dtest5.runtimeconfig.json
+C:\Users\yang2\source\repos\CoreTest\dtest5\dtest5\bin\Debug\netcoreapp2.1\dtest5.runtimeconfig.dev.json
+C:\Users\yang2\source\repos\CoreTest\dtest5\dtest5\bin\Debug\netcoreapp2.1\dtest5.dll
+C:\Users\yang2\source\repos\CoreTest\dtest5\dtest5\bin\Debug\netcoreapp2.1\dtest5.pdb
+C:\Users\yang2\source\repos\CoreTest\dtest5\dtest5\obj\Debug\netcoreapp2.1\dtest5.csproj.CoreCompileInputs.cache
+C:\Users\yang2\source\repos\CoreTest\dtest5\dtest5\obj\Debug\netcoreapp2.1\dtest5.AssemblyInfoInputs.cache
+C:\Users\yang2\source\repos\CoreTest\dtest5\dtest5\obj\Debug\netcoreapp2.1\dtest5.AssemblyInfo.cs
+C:\Users\yang2\source\repos\CoreTest\dtest5\dtest5\obj\Debug\netcoreapp2.1\dtest5.dll
+C:\Users\yang2\source\repos\CoreTest\dtest5\dtest5\obj\Debug\netcoreapp2.1\dtest5.pdb
+C:\Users\yang2\source\repos\CoreTest\dtest5\dtest5\obj\Debug\netcoreapp2.1\dtest5.csprojAssemblyReference.cache

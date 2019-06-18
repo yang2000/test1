@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "dtest6": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
